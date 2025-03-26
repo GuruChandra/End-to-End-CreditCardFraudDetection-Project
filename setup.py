@@ -5,20 +5,20 @@ with open('ReadMe.md','r',encoding='utf-8') as f:
 
 __version__= "0.0.0"
 REPO_NAME = "End-to-End-CreditCardFraudDetection-Project"
-AUTHORE_USER_NAME="GuruChandra"
+AUTHOR_USER_NAME="GuruChandra"
 SRC_REPO="creditcard_fraud_detection"
 AUTHOR_EMAIL="guruchandu4@gmail.com"
 
 setuptools.setup(
     name=SRC_REPO,
     version=__version__,
-    author=AUTHORE_USER_NAME,
+    author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small python package for credit card fraud detction app"
+    description="A small python package for credit card fraud detction app",
     long_description=long_description,
-    url=f"https://github.com/{AUTOR_USER_NAME}/{REPO_NAME}",
-    project_url={
-        "Bug Tracker": f"https://github.com/{AUTOR_USER_NAME}/{REPO_NAME}/issues"
+    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    project_urls={
+        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"":"src"},
     packages=setuptools.find_packages(where="src")
