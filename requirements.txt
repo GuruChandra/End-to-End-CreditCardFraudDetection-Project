@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+seaborn
+notebook
+fastapi==0.78.0
+uvicorn==0.18.3
+
+-e .
