@@ -1,6 +1,7 @@
 from creditcard_fraud_detection.constants import *
 from creditcard_fraud_detection.utils.common import read_yaml, create_directories
 from creditcard_fraud_detection.entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from creditcard_fraud_detection.entity import Model_Config
 
 class ConfigurationManager:
     def __init__(
@@ -49,3 +50,16 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+
+    def get_model_config(self)-> Model_Config:
+        config = self.config.model_trainer
+        params = self.params.TrainingArguments
+
+        create_directories([config.root_dir])
+        model_config = Model_Config(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            n_estimators=params.n_estimators,
+            max_depth=params.max_depth
+        )
+        return model_config

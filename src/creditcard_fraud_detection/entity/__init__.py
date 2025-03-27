@@ -20,3 +20,13 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
+
+
+
+@dataclass(frozen=True)
+class Model_Config:
+    root_dir: Path 
+    data_path: Path 
+    n_estimators: int
+    max_depth: int
+    
