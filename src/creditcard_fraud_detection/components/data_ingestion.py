@@ -4,6 +4,7 @@ import zipfile
 from creditcard_fraud_detection.logging import logger
 from creditcard_fraud_detection.utils.common import get_size
 from creditcard_fraud_detection.entity import DataIngestionConfig
+from pathlib import Path
 
 class DataIngestion:
     def __init__(
@@ -19,7 +20,7 @@ class DataIngestion:
             )
             logger.info(f"{filename} download! with folling info: \n {headers}")
         else:
-            logger.infor(f"File already exists of size: {get_size(Path(self.config.local_data_file))} ")
+            logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))} ")
 
     def extract_zip_file(self):
         unzip_path = self.config.unzip_dir
